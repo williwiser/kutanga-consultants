@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "./GeneralCard.module.css";
-import { list } from "postcss";
 
 interface Prop {
   title: string;

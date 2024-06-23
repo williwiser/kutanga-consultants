@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "./ServiceCard.module.css";
-import { list } from "postcss";
 
 interface Service {
   name: string;

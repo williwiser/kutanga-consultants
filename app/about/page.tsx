@@ -4,7 +4,6 @@ import Image from "next/image";
 import ceoPicture from "../assets/genesis_kutanga.jpg";
 import missionPicture from "../assets/stats2.svg";
 import visionPicture from "../assets/globe.svg";
-import Link from "next/link";
 
 function AboutPage() {
   return (
@@ -45,11 +44,12 @@ function AboutPage() {
                 complexities of the financial world. <br />
                 By offering personalized advice and strategic planning, we help
                 our clients overcome financial challenges and seize
-                opportunities. Our commitment is to understand each client's
-                unique circumstances and goals, ensuring they have the knowledge
-                and support needed to make informed decisions. Through our
-                dedicated service, we strive to enable our clients to achieve
-                their financial aspirations and secure a prosperous future.
+                opportunities. Our commitment is to understand each
+                client&apos;s unique circumstances and goals, ensuring they have
+                the knowledge and support needed to make informed decisions.
+                Through our dedicated service, we strive to enable our clients
+                to achieve their financial aspirations and secure a prosperous
+                future.
               </p>
               <Image
                 className={styles.icon}
@@ -81,8 +81,8 @@ function AboutPage() {
                 We aim to lead the industry through comprehensive,
                 client-centered solutions that address every aspect of financial
                 health. By integrating innovative strategies with a deep
-                understanding of our clients' needs, we seek to foster financial
-                stability, growth, and resilience.
+                understanding of our clients&apos; needs, we seek to foster
+                financial stability, growth, and resilience.
               </p>
             </div>
           </article>

@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "./ProcessCard.module.css";
-import { list } from "postcss";
 interface Prop {
   title: string;
   body: string;
