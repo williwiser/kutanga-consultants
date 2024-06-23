@@ -1,0 +1,73 @@
+#sn1 {
+  color: var(--primary);
+}
+#sn1 form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 40rem;
+  gap: 1rem;
+}
+.contactInfo {
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: var(--foreground);
+}
+.contactInfo div {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.info {
+  margin: 1rem 1rem 0 1rem;
+}
+
+#sn1 .icon {
+  max-width: 1rem;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+#sn1 input,
+#sn1 textarea {
+  border: 1px solid var(--foreground);
+  border-radius: 5px;
+  padding: 1rem;
+}
+
+#sn1 textarea {
+  min-height: 15rem;
+  resize: none;
+}
+#sn1 button {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  background-color: var(--background);
+  border-radius: 5px;
+  color: var(--accent);
+  font-size: bold;
+}
+
+.submitBtn {
+  color: var(--accent);
+  background-color: var(--background);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.submitBtn:hover {
+  background-color: var(--secondary);
+}
+
+.messageSuccess {
+  text-align: center;
+}
+
+.error {
+  text-align: center;
+  color: red;
+}

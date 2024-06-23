@@ -1,113 +1,178 @@
 import Image from "next/image";
+import styles from "./Home.module.css";
+import woman from "./assets/woman.png";
+import stats from "./assets/stats.svg";
+import profile from "./assets/profile_round.svg";
+import Link from "next/link";
+import ProcessCard from "./components/ProcessCard";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main>
+      <section id={styles.hero}>
+        <div className={styles.snWrapper}>
+          <article className={styles.valueProp}>
+            <h1>
+              <span className="highlight">Optimize</span> your business <br />
+              Maximize your <span className="highlight">profit</span>
+            </h1>
+            <p>
+              We offer financial strategies and business plan development advice
+              to help you business grow.
+            </p>
+            <Link className={styles.contactBtn} href="/contact">
+              CONTACT US
+            </Link>
+          </article>
+          <Image className={styles.wom} src={woman} height={600} alt="logo" />
         </div>
-      </div>
+      </section>
+      <section id={styles.sn2} className={styles.sn}>
+        <div className={styles.snWrapper}>
+          <h1 className="title">WHO WE ARE</h1>
+          <hr className="underline" />
+          <div className={styles.content}>
+            <article className={styles.intro}>
+              <p>
+                We are a company which provides clients with financial support,
+                assistance with document renewals and tender applications, as
+                well as professional business plan development advice. We offer
+                a large range of services to help optimise your business and
+                finances.
+              </p>
+              <Link href="/about" className={styles.btn}>
+                Read more...
+              </Link>
+            </article>
+            <Image src={stats} height={250} alt="logo" />
+          </div>
+        </div>
+      </section>
 
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+      <section id={styles.sn3} className={styles.sn}>
+        <div className={styles.snWrapper}>
+          <h1 className="title">OUR PROCESS</h1>
+          <hr className="underline" />
+          <div className={styles.content}>
+            <div className={styles.grid}>
+              <ProcessCard
+                title="REGISTER"
+                body="We'll start with a FREE
+                      Business Consultation to
+                      understand what you need
+                      to get started. Usually, that
+                      means you need
+                      registrations at CIPC,
+                      SARS, databases for
+                      Tenders or Funding etc.
+                      "
+                isBlue={true}
+              />
+              <ProcessCard
+                title="EMPOWER"
+                body="We'll guide you through the
+                      compliance documents for
+                      specific industry and
+                      Tender applications, or any
+                      other helpful services like
+                      branding or website
+                      design."
+                isBlue={true}
+              />
+              <ProcessCard
+                title="GROW"
+                body="As your company grows,
+                      we provide ongoing
+                      support with Tenders and
+                      document renewals. We
+                      can also support you in
+                      services like business plan
+                      development."
+                isBlue={true}
+              />
+            </div>
+          </div>
+        </div>
+      </section>
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+      <section id={styles.sn4} className={styles.sn}>
+        <div className={styles.snWrapper}>
+          <h1 className="title">PACKAGES</h1>
+          <hr className="underline" />
+          <div className={styles.content}>
+            <div className={styles.grid}>
+              <ProcessCard
+                title="TENDER PACKAGE"
+                body="All you need to apply for a TENDER in the quickest possible timeframe.
+                      "
+                isBlue={false}
+              />
+              <ProcessCard
+                title="CLEARANCE PACKAGE"
+                body="Get your company registered at CIPC and SARS, with tax clearance."
+                isBlue={false}
+              />
+              <ProcessCard
+                title="VAT PACKAGE"
+                body="If you need a company with VAT registration, this is perfect."
+                isBlue={false}
+              />
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+              <ProcessCard
+                title="BRANDING PACKAGE"
+                body="Get your company on the map.
+                      "
+                isBlue={false}
+              />
+              <ProcessCard
+                title="CONSTRUCTION PACKAGE"
+                body="This is a 'fully setup' construction company as per the requirements of most contracts."
+                isBlue={false}
+              />
+              <ProcessCard
+                title="SECURITY PACKAGE"
+                body="This is 'full setup' security company as required by PSIRA."
+                isBlue={false}
+              />
+            </div>
+            <Link href="/services" className={styles.btn}>
+              Read more...
+            </Link>
+          </div>
+        </div>
+      </section>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+      <section id={styles.sn5} className={styles.sn}>
+        <div className={styles.snWrapper}>
+          <h1 className="title">TESTIMONIALS</h1>
+          <hr className="underline" />
+          <div className={styles.content}>
+            <div className={styles.grid}>
+              <div className={styles.testimonial}>
+                <Image src={profile} height={30} alt="logo" />
+                <p>
+                  <span>“Helped me when I didn’t know where to start”</span>
+                  <br />- Happy Client
+                </p>
+              </div>
+              <div className={styles.testimonial}>
+                <Image src={profile} height={30} alt="logo" />
+                <p>
+                  <span>“Remarkable service, truly the best at his game.”</span>
+                  <br />- Happy Client
+                </p>
+              </div>
+              <div className={styles.testimonial}>
+                <Image src={profile} height={30} alt="logo" />
+                <p>
+                  <span>“I received the financial documents I needed.”</span>
+                  <br />- Happy Client
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
   );
 }

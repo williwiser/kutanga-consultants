@@ -1,0 +1,52 @@
+.card {
+  display: inline-block;
+  border: 1px solid var(--primary);
+  overflow: hidden;
+  min-height: 22rem;
+}
+.cardTitleBlue {
+  background-color: var(--background);
+  color: var(--accent);
+  text-align: center;
+  padding: 1.5rem;
+  font-weight: bold;
+  font-size: 150%;
+}
+
+.cardTitleGrey {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: transparent;
+  border-bottom: 1px dashed var(--foreground);
+  color: var(--primary);
+  padding: 1.5rem;
+  font-weight: bold;
+  font-size: 130%;
+  min-height: 8rem;
+}
+
+.cardBody {
+  padding: 1.5rem;
+}
+
+@media only screen and (max-width: 1290px) {
+  .card {
+    text-align: center;
+    width: 100%;
+  }
+  .cardTitleBlue {
+    text-align: center;
+    font-size: 2rem;
+    background-color: var(--background);
+    color: var(--accent);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .card {
+    border: none;
+    min-height: fit-content;
+  }
+}

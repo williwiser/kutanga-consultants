@@ -1,0 +1,47 @@
+.content {
+  color: var(--primary);
+}
+
+#sn1 .content {
+  text-align: center;
+}
+
+#sn2 .content,
+#sn3 .content {
+  display: flex;
+  justify-content: space-between;
+  gap: 5rem;
+  align-items: center;
+}
+
+#sn2 .content p,
+#sn3 .content p {
+  max-width: 50rem;
+}
+
+#sn4 .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.creds {
+  margin-top: 1rem;
+}
+
+.name {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 1140px) {
+  .icon {
+    display: none;
+  }
+
+  #sn2 .content,
+  #sn3 .content {
+    justify-content: center;
+    text-align: center;
+  }
+}
