@@ -27,6 +27,7 @@
 
 .cardBody {
   padding: 1.5rem;
+  color: var(--primary);
 }
 .cardBody li {
   display: flex;

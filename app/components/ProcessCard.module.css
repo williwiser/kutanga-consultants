@@ -29,6 +29,7 @@
 
 .cardBody {
   padding: 1.5rem;
+  color: var(--primary);
 }
 
 @media only screen and (max-width: 1290px) {

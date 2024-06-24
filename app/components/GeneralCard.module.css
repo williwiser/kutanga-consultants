@@ -10,6 +10,10 @@
   font-weight: bold;
 }
 
+.cardBody {
+  color: var(--primary);
+}
+
 @media only screen and (max-width: 1290px) {
   .card {
     text-align: center;
