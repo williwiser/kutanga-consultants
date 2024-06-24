@@ -18,13 +18,14 @@ function ContactPage() {
     e.preventDefault();
 
     emailjs
-      .sendForm("template_zah3fmu", "template_zah3fmu", form.current!, {
+      .sendForm("service_jndzm3c", "template_zah3fmu", form.current!, {
         publicKey: "Ll8H5_isYgdFODuAM",
       })
       .then(
         () => {
           console.log("SUCCESS!");
           setMessageSent(true);
+          setGotError(false);
         },
         (error) => {
           console.log("FAILED...", error.text);
@@ -121,8 +122,9 @@ function ContactPage() {
             )}
             {gotError ? (
               <p className={styles.error}>
-                There seems to be a problem. <br></br>
-                Please try again another time.
+                <strong>
+                  There seems to be a problem, please try again another time.
+                </strong>
               </p>
             ) : null}
           </div>

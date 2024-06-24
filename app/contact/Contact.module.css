@@ -28,7 +28,9 @@
 }
 .container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   margin-top: 1rem;
 }
 
@@ -68,6 +70,11 @@
 }
 
 .error {
+  margin-top: 2rem;
   text-align: center;
   color: red;
+  background-color: var(--foreground);
+  width: 100%;
+  padding: 1rem;
+  border-radius: 5px;
 }
