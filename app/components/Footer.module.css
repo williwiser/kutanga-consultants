@@ -53,5 +53,10 @@
   .footer .snWrapper {
     flex-direction: column;
     text-align: center;
+    padding: 5 2rem;
+  }
+
+  .socials {
+    margin-top: 2rem;
   }
 }
